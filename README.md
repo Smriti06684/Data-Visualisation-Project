@@ -18,20 +18,18 @@ You can access the fully deployed dashboard here: https://pandasdataviz.shinyapp
 📁 PROJECT STRUCTURE 
 Below is a list of all major files and folders contained in the ZIP/GitHub repository, along with short summaries of their purpose.
 
-1. app/ (Shiny Application Folder)
-This folder contains everything required to run the dashboard.
-- app.R (The main Shiny application file that builds the UI, server logic, charts, maps, filters, and KPIs.)
-- data/ (Contains all datasets used by the dashboard.)
-  - data/processed/
- - time_trends.csv (Cleaned and aggregated tap-on/tap-off counts by date, mode, type, and day category.)
- - stop_taps.csv (Stop-level tap activity with matched stop IDs and GTFS coordinates.)
-  - data/raw/
- - stop_locations.csv (Extracted GTFS stop coordinates (lat/lon) for bubble mapping.)
+1. app.R
+The main Shiny application file that builds the UI, server logic, charts, maps, filters, data processing and KPIs.
 
-2. scripts/ (Data Preprocessing Scripts)
-This script prepares raw Opal and GTFS data before feeding them into the Shiny app.
-- 02_data_prep.R (Cleans and merges Opal data files).
-- 03_match_stops_gtfs.R (Matches Opal stop identifiers/postcodes with GTFS stop names and coordinates.)
+2. data/ (Contains all datasets used by the dashboard)
+- Intentional_self-harm_hospitalisations_by_Sex_and_Age.csv — Age-standardised hospitalisation rates for intentional self-harm in NSW, broken down by sex and age group over time.
+- Life_satisfaction_by_Category.csv — Proportion of NSW adults reporting each level of life satisfaction (Delighted to Terrible) by year.
+- Mental_Health_related_emergency_department_visits_annual.csv — Annual crude rates of mental health related ED presentations in NSW by age group and sex.
+- Mental_health_related_emergency_department_visits_monthly.csv — Quarterly mental health ED presentation rates by age, sex, and Local Health District, used for the COVID impact comparison.
+- Psychological_distress_in_adults_by_Category_and_LHD.csv — Proportion of adults reporting high or very high psychological distress, broken down by Local Health District and year.
+- Psychological_distress_in_adults_by_level.csv — Statewide breakdown of psychological distress across all four levels (Low, Moderate, High, Very High) by year.
+- Self-rated_mental_health_status_by_Category.csv — Proportion of NSW adults self-reporting each category of mental health status (Excellent to Very Poor) by year.
+- Suicide_by_LHD.csv — Age-standardised suicide rates per 100,000 population for each NSW Local Health District by year.
 
 3. README.md
 The file you are reading now (describes project purpose, structure, and usage instructions.)
